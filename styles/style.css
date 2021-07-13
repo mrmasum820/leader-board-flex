@@ -11,12 +11,12 @@ body {
     background-color: #E5E5E5;
 }
 .header-container {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 .container {
     background-color: white;
-    width: 1200px;
+    max-width: 1200px;
     margin: 10px auto;
     padding: 30px;
     border-radius: 20px;
@@ -172,4 +172,38 @@ hr {
     background: rgba(255, 74, 95, 0.212);
     color: #FF4A60;
     border-radius: 20px;
+}
+
+
+@media screen and (max-width: 992px) {
+    .header-container {
+        max-width: 700px;
+    }
+    .top-player, .blogs, .courses {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+}
+
+
+
+@media screen and (max-width: 688px){
+    .header, .logo {
+        flex-direction: column;
+    }
+    .logo {
+        margin-top: 25px;
+    }
+
+    .top-player-title {
+        text-align: center;
+    }
+
+    .top-player, .blogs, .courses {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+    }
+    .players {
+        justify-content: center;
+    }
 }
